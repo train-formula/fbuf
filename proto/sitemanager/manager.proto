@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package fbuf.sitemanager;
+
+option go_package = "github.com/train-formula/fbuf-go/sitemanagerpb";
+
+import "google/protobuf/timestamp.proto";
+
+service SiteManager {
+
+    rpc InitializeSite(InitializeSiteRequest) returns (InitializeSiteResponse);
+}
+
+
+
+message InitializeSiteRequest {
+
+}
+
+message InitializeSiteResponse {
+    string site_id = 1;
+}
